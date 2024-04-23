@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option csharp_namespace = "Grpc.Contracts";
+
+package grpc.contracts;
+
+message PincodeRequest {
+  string city = 1;
+}
+
+message PincodeResponse  {
+  string city = 1;
+  string pincode = 2;
+  
+}

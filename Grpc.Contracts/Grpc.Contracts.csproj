@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>Grpc.Contracts</RootNamespace>
+    <AssemblyName>Grpc.Contracts</AssemblyName>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <PackageOutputPath>../packages</PackageOutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Protobuf Include="Protos\grpc\contracts\pincode.proto"/>
+
+    <!-- Set visible to false so the file doesn't show up in solution explorer twice -->
+    <Content Include="Protos\grpc\contracts\pincode.proto" Pack="true" Visible="true" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Grpc.AspNetCore" Version="2.62.0" />
+    <PackageReference Include="Grpc.Tools" Version="2.62.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+</Project>
+

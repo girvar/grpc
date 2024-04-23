@@ -1,0 +1,11 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "Grpc.Api";
+import "grpc/contracts/pincode.proto";
+package grpc.api;
+
+// The PinCode service definition.
+service Pincode {
+  // Get Pincode
+  rpc GetPincode (grpc.contracts.PincodeRequest) returns (grpc.contracts.PincodeResponse);
+}
