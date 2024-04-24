@@ -11,9 +11,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Protobuf Include="Protos\pincodeservice.proto" GrpcServices="Server" AdditionalImportDirs="$(PkgGrpc_Contracts)\content\Protos" />
+    <Protobuf Include="Protos\pincodeservice.proto" GrpcServices="Server" AdditionalImportDirs="$(PkgGrpc_Contracts)\content\Protos"/>
     <PackageReference Include="Grpc.Contracts" Version="1.0.0" GeneratePathProperty="true" />
     <PackageReference Include="Grpc.AspNetCore" Version="2.62.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    
   </ItemGroup>
 
 </Project>

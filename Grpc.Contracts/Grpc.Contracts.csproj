@@ -12,13 +12,13 @@
 
 
   <ItemGroup>
-    <Protobuf Include="Protos\dvh\contracts\pincode.proto"/>
-    <Protobuf Include="Protos\dvh\contracts\weatherReport.proto"/>
-    <Protobuf Include="Protos\dvh\contracts\weather.proto"/>
+    <Protobuf Include="Protos\pincode.proto" />
+    <Protobuf Include="Protos\weatherReport.proto" />
+    <Protobuf Include="Protos\weather.proto" />
     <!-- Set visible to false so the file doesn't show up in solution explorer twice -->
-    <Content Include="Protos\dvh\contracts\pincode.proto" Pack="true" Visible="true" />
-    <Content Include="Protos\dvh\contracts\weatherReport.proto" Pack="true" Visible="true" />
-    <Content Include="Protos\dvh\contracts\weather.proto" Pack="true" Visible="true" />
+    <Content Include="Protos\pincode.proto" Pack="true" Visible="true" />
+    <Content Include="Protos\weatherReport.proto" Pack="true" Visible="true" />
+    <Content Include="Protos\weather.proto" Pack="true" Visible="true" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Grpc.AspNetCore" Version="2.62.0" />
@@ -27,6 +27,5 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
   </ItemGroup>
-
 </Project>
 
