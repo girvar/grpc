@@ -7,11 +7,17 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Protos\weatherservice.proto" />
+  </ItemGroup>
 
   <ItemGroup>
     <Protobuf Include="Protos\customers.proto" GrpcServices="Client" />
     <Protobuf Include="Protos\greet.proto" GrpcServices="Client" />
-    <Protobuf Include="Protos\pincodeservice.proto" GrpcServices="Client" AdditionalImportDirs="$(PkgGrpc_Contracts)\content\Protos" />
+    <Protobuf Include="Protos\pincodeservice.proto" GrpcServices="Client" AdditionalImportDirs="$(PkgGrpc_Contracts)\content" />
+    <Protobuf Include="Protos\weatherservice.proto" GrpcServices="Client">
+      <AdditionalImportDirs>$(PkgGrpc_Contracts)\content</AdditionalImportDirs>
+    </Protobuf>
   </ItemGroup>
   
   <ItemGroup>

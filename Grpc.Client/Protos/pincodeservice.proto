@@ -8,4 +8,5 @@ package grpc.api;
 service Pincode {
   // Get Pincode
   rpc GetPincode (grpc.contracts.PincodeRequest) returns (grpc.contracts.PincodeResponse);
+  // Note: Use full name for the request and response message types.
 }

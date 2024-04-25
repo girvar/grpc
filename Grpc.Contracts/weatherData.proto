@@ -4,7 +4,7 @@ option csharp_namespace = "Grpc.Contracts";
 
 package grpc.contracts;
 
-message WeatherReport {
+message WeatherData {
 	string high = 1;
 	string low = 2;
 	string forecast = 3;

@@ -11,13 +11,16 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Protobuf Include="Protos\pincodeservice.proto" GrpcServices="Server" AdditionalImportDirs="$(PkgGrpc_Contracts)\content\Protos"/>
-    <PackageReference Include="Grpc.Contracts" Version="1.0.0" GeneratePathProperty="true" />
-    <PackageReference Include="Grpc.AspNetCore" Version="2.62.0" />
+    <None Remove="Protos\weatherservice.proto" />
   </ItemGroup>
 
   <ItemGroup>
-    
+    <Protobuf Include="Protos\weatherservice.proto" GrpcServices="Server">
+      <AdditionalImportDirs>$(PkgGrpc_Contracts)\content</AdditionalImportDirs>
+    </Protobuf>
+    <Protobuf Include="Protos\pincodeservice.proto" GrpcServices="Server" AdditionalImportDirs="$(PkgGrpc_Contracts)\content" />
+    <PackageReference Include="Grpc.Contracts" Version="1.0.0" GeneratePathProperty="true" />
+    <PackageReference Include="Grpc.AspNetCore" Version="2.62.0" />
   </ItemGroup>
 
 </Project>

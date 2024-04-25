@@ -1,14 +1,14 @@
 syntax = "proto3";
 
 option csharp_namespace = "Grpc.Contracts";
-import "Protos/weatherReport.proto";
+import "weatherData.proto";
 package grpc.contracts;
 
-message WeatherRequest {
+message CityWeatherRequest {
   string city = 1;
 }
 
-message WeatherResponse {
+message CityWeatherResponse {
   string city = 1;
-  WeatherReport weatherReport = 2;
+  WeatherData weatherData = 2;
 }

@@ -12,13 +12,13 @@
 
 
   <ItemGroup>
-    <Protobuf Include="Protos\pincode.proto" />
-    <Protobuf Include="Protos\weatherReport.proto" />
-    <Protobuf Include="Protos\weather.proto" />
+    <Protobuf Include="pincode.proto" />
+    <Protobuf Include="weatherData.proto" />
+    <Protobuf Include="cityweather.proto" />
     <!-- Set visible to false so the file doesn't show up in solution explorer twice -->
-    <Content Include="Protos\pincode.proto" Pack="true" Visible="true" />
-    <Content Include="Protos\weatherReport.proto" Pack="true" Visible="true" />
-    <Content Include="Protos\weather.proto" Pack="true" Visible="true" />
+    <Content Include="pincode.proto" Pack="true" Visible="true" />
+    <Content Include="weatherData.proto" Pack="true" Visible="true" />
+    <Content Include="cityweather.proto" Pack="true" Visible="true" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Grpc.AspNetCore" Version="2.62.0" />

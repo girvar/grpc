@@ -4,6 +4,7 @@ using Grpc.Core;
 using Grpc.Net.Client;
 using GrpcServer;
 using static Grpc.Api.Pincode;
+using static Grpc.Api.WeatherService;
 namespace GrpcClient
 {
     class Program
@@ -11,6 +12,7 @@ namespace GrpcClient
         static void Main(string[] args)
         {
             PincodeServiceTest();
+            WeatherServiceTest();
             //await GreetServiceTest();
             //await CustomerServiceTest();
             //Console.ReadLine();
@@ -26,16 +28,30 @@ namespace GrpcClient
             DisplayCity(reply);
         }
 
+        private static void WeatherServiceTest()
+        {
+            var channel = GrpcChannel.ForAddress("https://localhost:9001");
+            var client = new WeatherServiceClient(channel);
+
+            var input = new CityWeatherRequest { City = "Pune" };
+            Console.WriteLine($"Invoking weather service for city {input.City}...");
+            var reply = client.GetWeather(input);
+            DisplayWeather(reply);
+        }
+
         private static void DisplayCity(PincodeResponse response)
         {
             Console.WriteLine($"Result from PincodeService city: {response.City} -> Pincode: {response.Pincode}");
-            Console.WriteLine($"Weather Report: " +
-                $"Forecast: {response.WeatherResponse.WeatherReport.Forecast}, " +
-                $"High: {response.WeatherResponse.WeatherReport.High}, " +
-                $"Low: {response.WeatherResponse.WeatherReport.Low} ");
         }
 
-
+        private static void DisplayWeather(CityWeatherResponse response)
+        {
+            Console.WriteLine($"Weather Report: " +
+                $"City: {response.City}, " +
+                $"Forecast: {response.WeatherData.Forecast}, " +
+                $"High: {response.WeatherData.High}, " +
+                $"Low: {response.WeatherData.Low} ");
+        }
 
         private static async Task CustomerServiceTest()
         {
