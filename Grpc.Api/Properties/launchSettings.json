@@ -1,6 +1,6 @@
 ﻿{
   "profiles": {
-    "Grpc.Api": {
+    "Grpc.Service": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": false,

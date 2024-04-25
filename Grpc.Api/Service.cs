@@ -1,5 +1,4 @@
-// using Grpc.Api;
-using Grpc.Api;
+using Grpc.Service;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 

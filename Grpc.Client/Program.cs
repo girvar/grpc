@@ -3,8 +3,8 @@ using Grpc.Contracts;
 using Grpc.Core;
 using Grpc.Net.Client;
 using GrpcServer;
-using static Grpc.Api.Pincode;
-using static Grpc.Api.WeatherService;
+using static Grpc.Service.Pincode;
+using static Grpc.Service.WeatherService;
 namespace GrpcClient
 {
     class Program

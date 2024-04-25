@@ -1,8 +1,8 @@
 ﻿syntax = "proto3";
 
-option csharp_namespace = "Grpc.Api";
+option csharp_namespace = "Grpc.Service";
 import "cityweather.proto";
-package grpc.api;
+package grpc.Service;
 
 // The PinCode service definition.
 service WeatherService {

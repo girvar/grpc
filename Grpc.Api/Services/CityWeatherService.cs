@@ -1,7 +1,7 @@
 ﻿using Grpc.Contracts;
 using Grpc.Core;
 using Microsoft.Extensions.Logging;
-namespace Grpc.Api
+namespace Grpc.Service
 {
     public class CityWeatherService : WeatherService.WeatherServiceBase
     {

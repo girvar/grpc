@@ -1,10 +1,10 @@
 ﻿syntax = "proto3";
 
-option csharp_namespace = "Grpc.Api";
+option csharp_namespace = "Grpc.Service";
 import "cityweather.proto";
-package grpc.api;
+package grpc.service;
 
-// The PinCode service definition.
+// The WeatherService definition.
 service WeatherService {
   // Get Pincode
   rpc GetWeather (grpc.contracts.CityWeatherRequest) returns (grpc.contracts.CityWeatherResponse);

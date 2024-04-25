@@ -5,7 +5,7 @@ VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Grpc.Contracts", "Grpc.Contracts\Grpc.Contracts.csproj", "{2261C51A-9ED0-4671-94AC-45AE0D579640}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Grpc.Api", "Grpc.Api\Grpc.Api.csproj", "{06FA731A-2B36-4E43-8915-DA7BAEF422AD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Grpc.Service", "Grpc.Api\Grpc.Service.csproj", "{06FA731A-2B36-4E43-8915-DA7BAEF422AD}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Grpc.Client", "Grpc.Client\Grpc.Client.csproj", "{B27FF001-A81D-473C-B23B-559150C423F5}"
 EndProject
