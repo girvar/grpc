@@ -19,13 +19,16 @@ namespace Grpc.Api
 
         public override Task<PincodeResponse> GetPincode(PincodeRequest request, ServerCallContext context)
         {
+            WeatherResponse weatherResponse = GetWeather(request.City);
+
             if (_pincodeDictionary.ContainsKey(request.City))
             {
                 var pincode = _pincodeDictionary[request.City];
                 return Task.FromResult(new PincodeResponse
                 {
                     City = request.City,
-                    Pincode = pincode
+                    Pincode = pincode,
+                    WeatherResponse = weatherResponse
                 });
             }
             else
@@ -33,9 +36,25 @@ namespace Grpc.Api
                 return Task.FromResult(new PincodeResponse
                 {
                     City = request.City,
-                    Pincode = "NotFound"
+                    Pincode = "NotFound",
+                    WeatherResponse = weatherResponse
                 });
             }
+        }
+
+        private WeatherResponse GetWeather(string city)
+        {
+            WeatherResponse weatherResponse = new WeatherResponse()
+            {
+                City = city,
+                WeatherReport = new WeatherReport()
+                {
+                    Forecast = "Cloudy",
+                    High = "100.0",
+                    Low = "90.0"
+                }
+            };
+            return weatherResponse;
         }
     }
 }

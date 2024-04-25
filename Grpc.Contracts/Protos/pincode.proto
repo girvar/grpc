@@ -1,7 +1,7 @@
 syntax = "proto3";
 
 option csharp_namespace = "Grpc.Contracts";
-
+import "Protos/weather.proto";
 package grpc.contracts;
 
 message PincodeRequest {
@@ -11,5 +11,5 @@ message PincodeRequest {
 message PincodeResponse  {
   string city = 1;
   string pincode = 2;
-  
+  WeatherResponse WeatherResponse = 3;
 }

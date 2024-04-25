@@ -23,8 +23,19 @@ namespace GrpcClient
             var input = new PincodeRequest { City = "Pune" };
             Console.WriteLine($"Invoking PincodeService for city {input.City}...");
             var reply = client.GetPincode(input);
-            Console.WriteLine($"Result from PincodeService city: {reply.City} -> Pincode: {reply.Pincode}");
+            DisplayCity(reply);
         }
+
+        private static void DisplayCity(PincodeResponse response)
+        {
+            Console.WriteLine($"Result from PincodeService city: {response.City} -> Pincode: {response.Pincode}");
+            Console.WriteLine($"Weather Report: " +
+                $"Forecast: {response.WeatherResponse.WeatherReport.Forecast}, " +
+                $"High: {response.WeatherResponse.WeatherReport.High}, " +
+                $"Low: {response.WeatherResponse.WeatherReport.Low} ");
+        }
+
+
 
         private static async Task CustomerServiceTest()
         {
